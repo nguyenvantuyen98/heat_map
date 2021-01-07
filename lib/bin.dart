@@ -12,13 +12,12 @@ class Bin {
   double yCenter;
 
   double getDistanceToPoint(double radarX, double radarY) {
-    return sqrt(pow((radarX - xCenter), 2) + pow((radarY - yCenter), 2));
+    return sqrt(pow(radarX - xCenter, 2) + pow(radarY - yCenter, 2));
   }
 
   @override
   String toString() {
     return '$colorLevel';
-    // return '($x, $y, $colorLevel)';
   }
 
   static printMatrix(List<List<Bin>> matrix) {

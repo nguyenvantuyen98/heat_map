@@ -1,5 +1,9 @@
+import 'coordinate.dart';
+import 'native_size.dart';
+import 'radar_single.dart';
+
 class FakeData {
-  static RadarData getData() => RadarData(
+  static RadarSingle getData() => RadarSingle(
       coordinate: Coordinate(
         x: 60,
         y: 60,
@@ -10,8 +14,8 @@ class FakeData {
       ),
       aveCrowdLevel: 50);
 
-  static List<RadarData> getListData() => <RadarData>[
-        RadarData(
+  static List<RadarSingle> getListData() => <RadarSingle>[
+        RadarSingle(
             coordinate: Coordinate(
               x: 200,
               y: 300,
@@ -21,7 +25,7 @@ class FakeData {
               height: 10,
             ),
             aveCrowdLevel: 90),
-        RadarData(
+        RadarSingle(
             coordinate: Coordinate(
               x: 130,
               y: 110,
@@ -31,7 +35,7 @@ class FakeData {
               height: 10,
             ),
             aveCrowdLevel: 150),
-        RadarData(
+        RadarSingle(
             coordinate: Coordinate(
               x: 170,
               y: 180,
@@ -41,7 +45,7 @@ class FakeData {
               height: 10,
             ),
             aveCrowdLevel: 300),
-        RadarData(
+        RadarSingle(
             coordinate: Coordinate(
               x: 150,
               y: 200,
@@ -52,36 +56,4 @@ class FakeData {
             ),
             aveCrowdLevel: 100),
       ];
-}
-
-class RadarData {
-  RadarData({
-    this.coordinate,
-    this.nativeSize,
-    this.aveCrowdLevel,
-  });
-
-  Coordinate coordinate;
-  NativeSize nativeSize;
-  double aveCrowdLevel;
-}
-
-class Coordinate {
-  Coordinate({
-    this.x,
-    this.y,
-  });
-
-  double x;
-  double y;
-}
-
-class NativeSize {
-  NativeSize({
-    this.width,
-    this.height,
-  });
-
-  double width;
-  double height;
 }
